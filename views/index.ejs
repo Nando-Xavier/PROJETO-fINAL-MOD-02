@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/a9e4fdd736.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Index</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <section id="flex">
+        <% listLivros.forEach(element => { %>
+      <a href="/detalhes/<%= element.id %> ">
+        <article class="card">
+            <div class="imagem">
+          <img src="<%= element.img %>" alt="imagem do produto" />
+        </div>
+          <div>
+              <p><%= element.nome %> <br></p>
+              <p><%= element.preço %></p>
+          </div>
+        </article>
+    </a>
+    <div class="icon">
+      <a href="/deletar/<%= element.id %>"> <i class="fa-solid fa-trash"></i></a>
+      <a href="/editar/<%= element.id %>"> <i class="fa-solid fa-pencil fa-1x"></i></a>
+    </div>
+        <% }) %>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Editar</title>
+  </head>
+  <body>
+    <%- include('./partials/header.ejs') %>
+    <main>
+      <section id="form">
+        <form method="post" action="/editar/<%= editar.id %> ">
+          <fieldset>
+            <legend>Editar Livro</legend>
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              name="nome"
+              required
+              value="<%= editar.nome %> "
+            />
+
+            <label for="autor">Autor</label>
+            <input
+              type="text"
+              name="autor"
+              required
+              value="<%= editar.autor %> "
+            />
+
+            <label for="img">Imagem</label>
+            <input type="url" name="img" required value="<%= editar.img %> " />
+
+            <label for="preco">Preço</label>
+            <input
+              type="text"
+              name="preco"
+              required
+              value="<%= editar.preco %> "
+            />
+
+            <label for="descricao">Descrição</label>
+            <input
+              type="text"
+              name="descricao"
+              required
+              value="<%= editar.descricao %> "
+            />
+
+            <label for="editora">Editora</label>
+            <input
+              type="text"
+              name="editora"
+              required
+              value="<%= editar.editora %> "
+            />
+
+            <label for="paginas">Numero de Páginas</label>
+            <input
+              type="number"
+              name="paginas"
+              required
+              value="<%= editar.paginas %> "
+            />
+
+            <label for="peso">Peso</label>
+            <input
+              type="text"
+              name="peso"
+              required
+              value="<%= editar.peso %> "
+            />
+
+            <button onclick="alerta()" type="submit">Editar</button>
+            <script>
+              function alerta() {
+                swal({
+                  title: "Olá!",
+                  text: "Editado com sucesso.",
+                  icon: "success",
+                });
+              }
+            </script>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</html>

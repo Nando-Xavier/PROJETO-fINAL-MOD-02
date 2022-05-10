@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Detalhes</title>
+</head>
+<body id="geral">
+    <%- include('./partials/header.ejs') %>
+    <main>
+<section id="detalhes">
+    <article class="detalhes">
+        <img src="<%= livrosDetalhes.img %> " alt="<%= livrosDetalhes.nome %> ">
+    </article >
+    <article id="detalhes1">
+        <p><%= livrosDetalhes.nome %></p>
+        <p> Nome do Autor:  <%= livrosDetalhes.autor %> </p>
+        <p> Editora:  <%= livrosDetalhes.editora %> </p>
+        <p> Paginas:  <%= livrosDetalhes.paginas %> </p>
+        <p> Peso:  <%= livrosDetalhes.peso %> </p>
+        <p> Dimensões:  <%= livrosDetalhes.dimensões %> </p>
+        <p> Preço: <%= livrosDetalhes.preco %></p>
+    </article>
+</section>
+<section id="descrição">
+    <article>
+        <p id="descrição">Descrição</p>
+        <p><%= livrosDetalhes.descricao %> </p>
+    </article>
+</section>
+    </main>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
