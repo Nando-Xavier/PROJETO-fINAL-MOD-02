@@ -49,3 +49,9 @@ export const livros = connection.define(
     timestamps: false,
   }
 );
+
+const initTable = async () => {
+  await livros.sync()
+}
+
+initTable();
