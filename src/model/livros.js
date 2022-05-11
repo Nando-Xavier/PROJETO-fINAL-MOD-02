@@ -34,7 +34,7 @@ export const livros = connection.define(
       allowNull: false,
     },
     paginas: {
-      type: Sequelize.NUMBER,
+      type: Sequelize.INTEGER,
       allowNull: false,
     },
     peso: {
