@@ -51,7 +51,7 @@ export const livros = connection.define(
 );
 
 const initTable = async () => {
-  await livros.sync()
-}
+  await livros.sync();
+};
 
 initTable();
