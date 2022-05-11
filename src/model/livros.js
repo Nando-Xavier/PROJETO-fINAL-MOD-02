@@ -1,4 +1,4 @@
-import Sequelize from "Sequelize";
+import Sequelize from "sequelize";
 import { connection } from "../database/connection.js";
 export const livros = connection.define(
   "livros",
