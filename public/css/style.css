@@ -107,8 +107,12 @@ section#flex article.card div.imagem div {
   height: 10%;
 }
 footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #001aff;
   height: 5%;
+  color: #ffffff;
 }
 
 #geral {
