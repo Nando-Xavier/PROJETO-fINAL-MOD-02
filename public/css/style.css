@@ -131,6 +131,7 @@ section#detalhes article.detalhes img {
 }
 section#descrição article p {
   margin-top: 1rem;
+  margin: 5rem;
 }
 section#descrição article p#descrição {
   margin: 1rem 30vw 0 30vw;
